@@ -2,12 +2,14 @@
 [![Docker Version](https://img.shields.io/docker/v/idscan/zabbix-proxy-sqlite3)](https://hub.docker.com/r/idscan/zabbix-server-mysql)
 [![Docker Image Size](https://img.shields.io/docker/image-size/idscan/zabbix-server-mysql)](https://hub.docker.com/r/idscan/zabbix-server-mysql)
 
-Zabbix server uses MySQL database with Microsoft ODBC driver for SQL Server on Alpine docker images
+Zabbix server uses MySQL database with Microsoft ODBC driver for SQL Server on Alpine and Ubuntu docker images
 
 ## Uses
 
   * Official docker image Zabbix server (MySQL) LTS
   * Microsoft ODBC driver for SQL Server 18
+  * Alpine-based: `Dockerfile`
+  * Ubuntu-based: `Dockerfile.ubuntu`
 
 ## Test
 
