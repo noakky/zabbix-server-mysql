@@ -1,8 +1,9 @@
-FROM zabbix/zabbix-server-mysql:alpine-7.0.26
+FROM zabbix/zabbix-server-mysql:alpine-7.0.27
 
 LABEL maintainer="mr.lioncub" \
       link1="https://github.com/zabbix/zabbix-docker/tree/7.0" \
-      link2="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server"
+      link2="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server" \
+      link3="https://github.com/pjsip/pjproject"
 
 USER root
 
@@ -17,5 +18,8 @@ RUN set -x \
   && apk add coreutils \
   && rm -rf $tempDir \
   && rm -rf /var/cache/apk/*
+
+RUN set -x \
+  && apk add --no-cache pjsua
 
 USER 1997
